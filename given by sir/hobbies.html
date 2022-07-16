@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>HOBBIE_BAR | N-574</title>
+<style>*{margin:0;padding:0}.flex-j-a-center{display:flex;justify-content:center;align-items:center}body{height:100vh;width:100vw}#box{padding:2%;height:50%;width:max-content;flex-direction:column;border:1px solid cyan;border-radius:20px}#ibox{height:15%;width:100%;flex-direction:row}#hobby_add{margin:2%;width:80%;font-size:1.4em;border:0;border-bottom:2px solid red}#hobby_add:focus{outline:0;border:0;border-bottom:2px solid red}#hobby_container{height:70%;width:100%;padding:2%;overflow-y:auto;font-size:1.2em}li{list-style:none;background:rgba(128,128,128,0.308);border-bottom:1px solid grey;padding:2%;margin:1% 0 1% 0}.remove{background:red;color:white;cursor:pointer;padding:2%;margin-right:2%}</style>
+</head>
+<body class=flex-j-a-center>
+<section class=flex-j-a-center id=box>
+<div id=ibox class=flex-j-a-center>
+<input type=text name=hobby id=hobby_add placeholder="Enter Your Hobby Here!!" autofocus><button type=button onclick=addhobby()>Add +</button>
+</div>
+<h1>Hobbies:</h1>
+<ul id=hobby_container>
+</ul>
+</section>
+</body>
+<script>newhobby=document.getElementById("hobby_add");hobby_container=document.getElementById("hobby_container");function addhobby(){hobby_container.innerHTML='<li><span class=\'remove\' onclick=\'confirm("Do you want to remove this Hobby From Your list??")?this.parentNode.style.display="none":alert("ok")\'>X</span><span>'+newhobby.value+"</span></li>"+hobby_container.innerHTML;newhobby.value="";newhobby.focus()};</script>
+</html>

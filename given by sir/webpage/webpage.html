@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigPage | N574</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            /* border-top: 1px solid black; */
+            cursor: pointer;
+        }
+        body{
+            height:100vh;
+            background:url("p1.jpg");
+            background-size: contain;
+            background-position: left;
+            background-repeat: no-repeat;
+        }
+        header{
+            height:20vh;
+            border: 1px solid black;
+        }
+        .flex-allcenter{
+            display: flex;
+            align-items: center;
+        }
+        nav>ul{
+            height:10vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgba(128, 128, 128, 0.199);
+        }
+        nav>ul>li{
+            list-style: none;
+            font-size: 1.2em;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        header>section{
+            height:10vh;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .n{
+            display: none;
+            /* border-radius: 5px; */
+            background: rgb(230, 230, 230);
+            color:black;
+            border-left: 2px solid rgb(0, 0, 0);
+            padding:1% 2% 1% 2%;
+        }
+        .n>ul{
+            height:100%;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .n>ul>li{
+            width:100%;
+            list-style: none;
+            padding:10%;
+        }
+        .n>ul>li:hover {
+            list-style: "👊";margin-left: 50%;
+            font-weight:bold;
+        }
+        li:hover .n{
+            position:absolute;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: max-content;
+            width:max-content;
+        }
+        iframe{
+            height:70vh;
+            width:100%;
+            border-bottom: 1px solid black;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class=flex-allcenter ><div>Logo</div><div>something</div></section>
+        <nav>
+            <ul>
+                <li><a href=home.html target=mainframe>Home</a></li>
+                <li>
+                    <a>Exam</a>
+                    <div class="n n1">
+                        <ul class=flex-allcenter>
+                            <li>Papers</li>
+                            <li>Marks</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a>Branch</a>
+                    <div class="n n1">
+                        <ul class=flex-allcenter>
+                            <li href=# target=mainframe>CSE</li>
+                            <li>ECE</li>
+                            <li>MECH</li>
+                            <li>CHEM</li>
+                            <li>CIVIL</li>
+                            <li>MME</li>
+                            <li>EEE</li>
+                        </ul>    
+                    </div>
+                </li>
+                <li><a href=# target=mainframe>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <iframe title=mainframe name=mainframe src=home.html frameborder=0></iframe>
+    <footer>
+        This is Footer>>?
+    </footer>
+</body>
+</html>
